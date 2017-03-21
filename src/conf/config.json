@@ -1,0 +1,7 @@
+{
+  "sys_srv_addr": ":8281",
+  "log_access_prefix": "/var/logs/go_log/api/access_",
+  "sys_log":"/tmp/go_segmentation.log",
+  "log_app_prefix": "/tmp/app_segmentation_",
+  "log_sys_path": "/tmp/segmentation_server.log"
+}
