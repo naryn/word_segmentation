@@ -9,9 +9,7 @@ import (
 	"regexp"
 	"utils"
 	"utils/config"
-	//"github.com/tim1020/godaemon"
 	"models"
-//	"github.com/yanyiwu/gojieba"
 )
 
 
@@ -50,8 +48,7 @@ func init() {
 func main() {
 
 	log.Printf("ApiServer %v start\n", models.Config.String("sys_srv_addr"))
-	http.HandleFunc("/", handle)                       //设置访问的路由
-	//err := godaemon.GracefulServe(config["addr"], nil) //设置监听的端口
+	http.HandleFunc("/", handle)
 	err := http.ListenAndServe(models.Config.String("sys_srv_addr"), nil)
 	if err != nil {
 		fmt.Println("Server Err: ", err)

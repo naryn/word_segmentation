@@ -54,16 +54,3 @@ func (wc *WordSegmentation) Tag(s string) string {
 	words = wc.Gojieba.Tag(s)
 	return strings.Join(words, ",")
 }
-
-//func (wc *WordSegmentation) Tokenize(s string) string {
-//
-//	use_hmm := true
-//	wordinfos := wc.Gojieba.Tokenize(s, gojieba.SearchMode, !use_hmm)
-//	return json.Marshal(wordinfos)
-//}
-//
-//func (wc *WordSegmentation) Extract(s string, len int32) string {
-//
-//	keywords := wc.Gojieba.ExtractWithWeight(s, len)
-//	return json.Marshal(keywords)
-//}
